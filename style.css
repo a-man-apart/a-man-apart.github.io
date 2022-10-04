@@ -160,7 +160,7 @@ header + * {margin-top: 8rem;}
     position: relative;
     /*height: calc(100vh - 8rem); MUTATU IN SECTION-BLOCK*/
     padding: 0 5rem 20vh;
-    background-image: url("media/background.jpg");
+    background-image: url("background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
