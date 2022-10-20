@@ -8,6 +8,7 @@ body {
     background-color: lightsteelblue;
     margin-left: 5rem;
     margin-right: 5rem;
+    line-height: 1.2;
 }
 
 * {box-sizing: border-box;}
