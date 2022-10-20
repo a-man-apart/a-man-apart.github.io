@@ -10,18 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
+<body onscroll="myFunction()">
     <header>
         <a class="logo" href="#">
-            <img src="logo.jpg" alt="logo">
+            <img src="media/logo.jpg" alt="logo">
         </a>
         <nav class="navigation">
-            <a href="#section-1" title="Pasiunile mele">Pasiuni</a>
-            <a href="#section-2" title="Portofoliul meu">Portofoliu</a>
-            <a href="#section-3" title="Cine ma recomanda">Recomandari</a>
-            <a href="#section-4" title="Informatii despre mine">Despre mine</a>
-            <a href="#section-5" title="Datele de contact">Contact</a>
+            <a href="#section-1" title="Pasiunile mele" class="pasiuni">Pasiuni</a>
+            <a href="#section-2" title="Portofoliul meu" class="portofoliu">Portofoliu</a>
+            <a href="#section-3" title="Cine ma recomanda" class="recomandari">Recomandari</a>
+            <a href="#section-4" title="Informatii despre mine" class="despre">Despre mine</a>
+            <a href="#section-5" title="Datele de contact" class="contact">Contact</a>
         </nav>
     </header>
     <section class="hero section-block">
@@ -38,7 +39,7 @@
         </div>
             <div class="my-picture">
                 <a class="picture" href="#">
-                    <img src="logo.jpg" alt="logo">
+                    <img src="media/logo.jpg" alt="logo">
                 </a> 
             </div>
            
@@ -121,7 +122,7 @@
         <div class="grid clearfix">
 
             <div class="grid-box box-half recomandations-box">
-                <img src="logo.jpg"  alt="profile photo">
+                <img src="media/logo.jpg"  alt="profile photo">
                 <div>
 
                     <h2>Togan Dragos</h2>
@@ -134,7 +135,7 @@
                 
             </div>
             <div class="grid-box box-half recomandations-box">
-                <img src="logo.jpg"  alt="profile photo">
+                <img src="media/logo.jpg"  alt="profile photo">
                 <div>
 
                     <h2>Togan Dragos</h2>
@@ -147,7 +148,7 @@
                 
             </div>
             <div class="grid-box box-half recomandations-box">
-                <img src="logo.jpg"  alt="profile photo">
+                <img src="media/logo.jpg"  alt="profile photo">
                 <div>
 
                     <h2>Togan Dragos</h2>
@@ -160,7 +161,7 @@
                 
             </div>
             <div class="grid-box box-half recomandations-box">
-                <img src="logo.jpg"  alt="profile photo">
+                <img src="media/logo.jpg"  alt="profile photo">
                 <div>
 
                     <h2>Togan Dragos</h2>
@@ -181,7 +182,7 @@
 
         <h1>Despre mine</h1>
         <div class="about-me-inner-container">
-            <img src="logo.jpg" alt="Poza mea">
+            <img src="media/logo.jpg" alt="Poza mea">
             <div>
 
                 <h2>Togan Dragos</h2>
@@ -211,5 +212,83 @@
 
     </footer>
     
+
+    <script>
+
+        // setTimeout(() => {
+        //     alert("Bine ai venit pe site-ul meu!") 
+
+        // }, 2000);
+
+        // window.addEventListener("scroll", function() {
+        //     const portofoliu = document.querySelector(".portofoliu");
+        //     portofoliu.style.color = "red";
+        //     setTimeout(() => {
+        //     const portofoliu = document.querySelector(".portofoliu");
+        //     portofoliu.style.color = "black";    
+        //     }, 500);
+        // });
+    
+        const section1 = document.getElementById("section-1");
+        const redPasiuni = section1.offsetTop;
+
+        const section2 = document.getElementById("section-2");
+        const redPortofoliu = section2.offsetTop;
+
+        const section3 = document.getElementById("section-3");
+        const redRecomandari = section3.offsetTop;
+
+        const section4 = document.getElementById("section-4");
+        const redDespre = section4.offsetTop;
+        console.log(redDespre);
+        const section5 = document.getElementById("section-5");
+        const redContact = section5.offsetTop;
+        console.log(redContact);
+
+        const pasiuni = document.querySelector(".pasiuni");
+        const portofoliu = document.querySelector(".portofoliu");
+        const recomandari = document.querySelector(".recomandari");
+        const despre = document.querySelector(".despre");
+        const contact = document.querySelector(".contact");
+        
+
+        function myFunction() {
+            if (window.scrollY >= (redPasiuni - 80)  && window.scrollY < (redPortofoliu - 80)) {
+                pasiuni.classList.remove("recomandari");
+                pasiuni.classList.add("recomandari1"); 
+            } else {
+                pasiuni.classList.remove("recomandari1");
+                pasiuni.classList.add("recomandari");
+            }
+            if (window.scrollY >= (redPortofoliu - 80) && window.scrollY < (redRecomandari - 80)) {
+                portofoliu.classList.remove("recomandari");
+                portofoliu.classList.add("recomandari1"); 
+            } else {
+                portofoliu.classList.remove("recomandari1");
+                portofoliu.classList.add("recomandari");
+            }
+            if (window.scrollY >= (redRecomandari - 80) && window.scrollY < (redDespre - 80)) {
+                recomandari.classList.remove("recomandari");
+                recomandari.classList.add("recomandari1"); 
+            } else {
+                recomandari.classList.remove("recomandari1");
+                recomandari.classList.add("recomandari");
+            }
+            if (window.scrollY >= (redDespre - 80) && window.scrollY < (redDespre + 100)) {
+                despre.classList.remove("despre");
+                despre.classList.add("despre1"); 
+            } else {
+                despre.classList.remove("despre1");
+                despre.classList.add("despre");
+            }
+            if (window.scrollY >= (redDespre + 100)) {
+                contact.classList.remove("recomandari");
+                contact.classList.add("recomandari1"); 
+            } else {
+                contact.classList.remove("recomandari1");
+                contact.classList.add("recomandari");
+            }
+        }
+    </script>
 </body>
 </html>

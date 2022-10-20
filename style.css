@@ -87,6 +87,15 @@ header + * {margin-top: 8rem;}
             height: 6rem;
             border-radius: 50%;
         }
+
+    .pasiuni, .portofoliu, .recomandari, .despre, .contact {
+        color: black;
+    }
+        
+    .pasiuni1, .portofoliu1, .recomandari1, .despre1, .contact1 {
+        color: red;
+    }
+    
     .navigation {
         display: inline-block;
         text-align: center;
@@ -97,7 +106,7 @@ header + * {margin-top: 8rem;}
             font-size: 1.6rem;
             font-weight: 600;
             text-decoration: none;
-            color: black;
+            /* color: black; */
         }
         .navigation > a:last-child {
             margin-right: 0;
@@ -105,7 +114,6 @@ header + * {margin-top: 8rem;}
         .navigation > a:hover {
             text-decoration: underline;
             color: purple;
-
         }
 
         .picture {
@@ -160,7 +168,7 @@ header + * {margin-top: 8rem;}
     position: relative;
     /*height: calc(100vh - 8rem); MUTATU IN SECTION-BLOCK*/
     padding: 0 5rem 20vh;
-    background-image: url("background.jpg");
+    background-image: url("media/background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -199,6 +207,10 @@ header + * {margin-top: 8rem;}
         
     }
 
+    .picture > img {
+        border-radius: 10%;
+    }
+
 @media (max-width:900px) {
     /* .section-block {     
         height: auto;
@@ -224,6 +236,7 @@ header + * {margin-top: 8rem;}
     .picture {
         margin-top: 5rem;
     }
+    
 
     /*.hero h1 {
         font-size: 3.2rem;
@@ -409,7 +422,7 @@ footer a {
     
 }
 .grid-box { 
-    float:left; 
+    float: left; 
    /* height: 10rem; */
     margin:0 2.5rem 4rem;
    /* background-color: red; */
