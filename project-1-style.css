@@ -6,7 +6,8 @@ html {
 body {
     background-color: mediumpurple;
     margin: 0 50px;
-    height: calc(100vh - 40px);
+    min-height: calc(100vh - 40px);
+    height: auto;
     padding: 20px;
 }
 
