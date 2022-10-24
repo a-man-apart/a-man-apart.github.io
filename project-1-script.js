@@ -12,32 +12,40 @@ let inputNumber = document.querySelector("input").value;
 guesses++;
 
 
-    if (inputNumber == number) {
+     if(inputNumber > 100 || inputNumber == 0){
         
-        document.getElementById("numberOfGuesses").innerText = `Ai ghicit din ${guesses} incercari!`;
+        document.getElementById("message").innerText = "Numarul trebuie sa fie cuprins intre 1 si 100.";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("message").style.color = "brown";
+    } else {
+        document.getElementById("message").style.display = "none";
+        if (inputNumber == number) {
             
-            if (guesses == 1) {
-                document.getElementById("numberOfGuesses").innerText = `Ai ghicit din ${guesses} incercare!`;
-            };
+            document.getElementById("numberOfGuesses").innerText = `Ai ghicit din ${guesses} incercari!`;
+                
+                if (guesses == 1) {
+                    document.getElementById("numberOfGuesses").innerText = `Ai ghicit din ${guesses} incercare!`;
+                };
 
-    } else if (inputNumber == "" || inputNumber == null){
-        let text = document.createElement("p");
-        document.querySelector("#messages").appendChild(text).innerText = "Va rog sa introduceti un numar!";
-    
-    } else if (inputNumber > number) {
+        } else if (inputNumber == "" || inputNumber == null){
+            let text = document.createElement("p");
+            document.querySelector("#messages").appendChild(text).innerText = "Va rog sa introduceti un numar!";
+        
+        } else if (inputNumber > number) {
 
-        let text = document.createElement("p");
-        document.querySelector("#messages").appendChild(text).innerText = "Numarul introdus este prea mare!";
-        // document.getElementById("message").innerText = "Numarul introdus este prea mare!";
+            let text = document.createElement("p");
+            document.querySelector("#messages").appendChild(text).innerText = "Numarul introdus este prea mare!";
+            // document.getElementById("message").innerText = "Numarul introdus este prea mare!";
 
-    } else if (inputNumber < number) {
+        } else if (inputNumber < number) {
 
-        let text = document.createElement("p");
-        document.querySelector("#messages").appendChild(text).innerText = "Numarul introdus este prea mic!";
-        //document.getElementById("message").innerText = "Numarul introdus este prea mic!";
+            let text = document.createElement("p");
+            document.querySelector("#messages").appendChild(text).innerText = "Numarul introdus este prea mic!";
+            //document.getElementById("message").innerText = "Numarul introdus este prea mic!";
 
-    } 
+        }; 
 
+    };
 };
 
 function indiciu () {
