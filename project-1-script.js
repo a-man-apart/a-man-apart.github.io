@@ -89,4 +89,16 @@ function reset () {
 
 function inapoi() {
     location.href="index.html"
-}
+};
+
+let input = document.querySelector("input[type='text']");
+
+input.addEventListener('focus', (event) => {
+    event.target.style.background = 'lightgrey';
+});
+
+document.querySelector("input").addEventListener("focusout", focusOutFunction);
+
+function focusOutFunction() {
+    document.querySelector("input").style.backgroundColor = "white";
+};
