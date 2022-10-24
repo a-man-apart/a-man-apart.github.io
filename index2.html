@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html> 
+  <head>
+  <title>JavaScript basic animation</title>
+
+  <script type="text/javascript">
+
+   function animate_string(id) {
+
+    let element = document.getElementById(id);
+    let textNode = element.childNodes[0];
+    let text = textNode.data;
+
+
+    setInterval (function () {
+
+        text = text.substring(1, text.length) + text[0];
+        textNode.data = text;
+        
+    }, 1000);
+   }
+
+  
+  </script>
+
+  </head> 
+
+  <body onload="animate_string('text')">
+    <div id="div"> 
+        <pre id="target" style="font-size:32px;">w3resource </pre>
+        <p id="text" style="font-size:32px;">Acesta este un text in miscare! &nbsp</p>
+    </div>
+  </body> 
+
+  </html>
