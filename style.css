@@ -297,6 +297,12 @@ header + * {margin-top: 8rem;}
     /* display:block; */
     font-size: 2.4rem;
     font-weight: 600px;
+    margin-bottom: 0.5rem;
+}
+.recomandations-box h3 {
+    /* display:block; */
+    font-size: 1.4rem;
+    font-weight: 600px;
     margin-bottom: 1rem;
 }
 .recomandations-box p {
