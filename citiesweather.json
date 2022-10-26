@@ -1,0 +1,103 @@
+[
+    {
+        "id": 264371,
+        "name": "Athens",
+        "state": "",
+        "country": "GR",
+        "coord": {
+            "lon": 23.716221,
+            "lat": 37.97945
+        }
+},
+{
+        "id": 6356055,
+        "name": "Barcelona",
+        "state": "",
+        "country": "ES",
+        "coord": {
+            "lon": 2.12804,
+            "lat": 41.399422
+        }
+},
+    {
+    "id": 2950158,
+    "name": "Berlin",
+    "state": "",
+    "country": "DE",
+    "coord": {
+        "lon": 10.45,
+        "lat": 54.033329
+    }
+},
+    {
+        "id": 683844,
+        "name": "Braşov",
+        "state": "",
+        "country": "RO",
+        "coord": {
+            "lon": 25.606131,
+            "lat": 45.648609
+        }
+},
+    {
+        "id": 683506,
+        "name": "Bucharest",
+        "state": "",
+        "country": "RO",
+        "coord": {
+            "lon": 26.10626,
+            "lat": 44.432251
+        }
+},
+    {
+    "id": 2618425,
+    "name": "Copenhagen",
+    "state": "",
+    "country": "DK",
+    "coord": {
+        "lon": 12.56553,
+        "lat": 55.675941
+    }
+},
+    {
+    "id": 5128581,
+    "name": "New York City",
+    "state": "NY",
+    "country": "US",
+    "coord": {
+        "lon": -74.005966,
+        "lat": 40.714272
+    }
+}, 
+    {
+    "id": 3067696,
+    "name": "Prague",
+    "state": "",
+    "country": "CZ",
+    "coord": {
+        "lon": 14.42076,
+        "lat": 50.088039
+    }
+},
+    {
+    "id": 3169070,
+    "name": "Rome",
+    "state": "",
+    "country": "IT",
+    "coord": {
+        "lon": 12.4839,
+        "lat": 41.894741
+    }
+},
+    {
+    "id": 1850147,
+    "name": "Tokyo",
+    "state": "",
+    "country": "JP",
+    "coord": {
+        "lon": 139.691711,
+        "lat": 35.689499
+    }
+}
+
+  ]

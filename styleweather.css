@@ -1,0 +1,33 @@
+:root {
+    font-size: 16px;
+}
+
+body{ 
+    margin: 2rem 5rem;
+    background-color:#1d1942 ;
+    color: #fff;
+}
+
+.section-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.city-weather {
+    background-color: red;
+    height: auto;
+    width: 200px;
+    margin-top: 5rem;
+    text-align: center;
+    border: 1px solid;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 125px;
+}
+
+.city {
+    margin-bottom: 25px;
+}
