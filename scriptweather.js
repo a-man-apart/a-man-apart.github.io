@@ -13,11 +13,14 @@ const temp = document.querySelectorAll(".temp");
 const icon = document.querySelectorAll(".icon");
 const weatherType = document.querySelectorAll(".weather-type");
 const date = document.querySelectorAll(".date");
-const time = document.querySelectorAll(".time");
+const time = document.querySelector(".time-zone-value");
+const interval = document.querySelectorAll(".interval");
 const wind = document.querySelectorAll(".wind");
 const humidity = document.querySelectorAll(".humidity");
 const atmp = document.querySelectorAll(".atmp");
 
+let longitude;
+let latitude;
 
 
 
@@ -55,12 +58,127 @@ const getCities = () => {
     });
 };
 
+const getCoordinates = (cityName = "Brasov") => {
+    fetch(`citiesweather.json`, {
+        method: 'GET',
+            })
+        .then((response) => response.json())
+        .then((data) => {
+
+            let cityLat = data.filter(l => {
+                return (l.name == cityName);
+            });
+            
+            latitude = cityLat[0].coord.lat.toFixed(3);
+
+            cityLon = data.filter(l => {
+                return (l.name == cityName);  
+            });
+
+            longitude = cityLon[0].coord.lon.toFixed(3);
+
+            console.log("Latitudine: ", latitude);
+            console.log("Longitudine: ", longitude);
+            
+            const getHour = () => {
+                fetch(`https://api.ipgeolocation.io/timezone?apiKey=e332ea37782c48b6969738785363d886&lat=${latitude}&long=${longitude}`
+                    //`https://timeapi.io/api/Time/current/coordinate?latitude=40.4&longitude=-3.7`
+                    , {
+                    method: 'GET',
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded',
+                       // 'Access-Control-Allow-Origin': '*'},
+                        },
+                    //mode: 'no-cors'
+                        })
+    
+                    .then((response) => response.json())
+                    .then((data) => {
+
+            console.log("DataHour: ", data);
+            
+                    let hour = data.date_time.slice(11, 20);
+                    console.log("Hour: ", hour);
+                    time.innerText = hour;
+                       
+                    let array = ["00:00:00", "03:00:00", "06:00:00", "09:00:00", "12:00:00", "15:00:00", "18:00:00", "21:00:00", "00:00:00", "03:00:00", "06:00:00", "09:00:00", "12:00:00", "15:00:00", "18:00:00", "21:00:00"];
+                        
+                    let ora = hour.slice(0, 2);
+                    console.log("Ora: ", ora);
+
+                        if (ora >= 00 && ora <= 02) {
+                            for (let i = 0; i < interval.length; i++) {
+                                interval[i].innerText = `${array[i]} - ${array[i+1]}`;
+                            };
+                        } else if (ora >= 03 && ora <= 05) {
+                            for (let i = 1; i < (interval.length+1); i++) {
+                                interval[i-1].innerText = `${array[i]} - ${array[i+1]}`;
+                            };
+                        } else if (ora <= 06 && ora <= 08) {
+                            for (let i = 2; i < (interval.length+2); i++) {
+                                interval[i-2].innerText = `${array[i]} - ${array[i+1]}`;
+                            }; 
+                        } else if (ora >= 09 && ora <= 11) {
+                            for (let i = 3; i < (interval.length+3); i++) {
+                                interval[i-3].innerText = `${array[i]} - ${array[i+1]}`;
+                            }; 
+                        } else if (ora >= 12 && ora <= 14) {
+                            for (let i = 4; i < (interval.length+4); i++) {
+                                interval[i-4].innerText = `${array[i]} - ${array[i+1]}`;
+                            };
+                        } else if (ora >= 15 && ora <= 17) {
+                            for (let i = 5; i < (interval.length+5); i++) {
+                                interval[i-5].innerText = `${array[i]} - ${array[i+1]}`;
+                            }; 
+                        } else if (ora >= 18 && ora <= 20) {
+                            for (let i = 6; i < (interval.length+6); i++) {
+                                interval[i-6].innerText = `${array[i]} - ${array[i+1]}`;
+                            };
+                        } else if (ora >= 21 && ora <= 23) {
+                            for (let i = 7; i < (interval.length+7); i++) {
+                                interval[i-7].innerText = `${array[i]} - ${array[i+1]}`;
+                            };
+                        };
+                    //interval[i].innerText = `${data.list[i].dt_txt.slice(11)} - ${data.list[i+1].dt_txt.slice(11)}`;
+                    //time.innerText = `${date.toLocaleDateString()} - ${date.toLocaleTimeString()}`;
+                    for (let i = 0; i < interval.length; i++) {
+                        // interval[i].innerText = "12:00:00 - 15:00:00";
+                    };
+                      
+                        console.log('Success:', data);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+
+                    
+            };
+            
+            console.log('Success:', data);
+
+            return getHour();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+};
+
+
+
+
+
+
+
 const getWeather = (cityId = 683844) => {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${cityId}&cnt=${cnt}&appid=${key}`, {
     method: 'GET',
         })
     .then((response) => response.json())
     .then((data) => {
+
+        // const oras = data.filter (c => {
+        //    return (c.id == cityId);
+        // }).name;
+        // console.log("Oras: ", oras);
 
         //city.innerText = data.city.name;
         for (let i = 0; i < city.length; i++) {
@@ -95,17 +213,7 @@ const getWeather = (cityId = 683844) => {
         // });
         console.log("Data: ", data);
 
-        //const date = new Date();
 
-        for (let i = 0; i < date.length; i++) {
-            //for(let j = 0; j < cnt; j++) {}
-            date[i].innerText = `${data.list[i].dt_txt.slice(0, 10)}`;
-        }
-        //time.innerText = `${date.toLocaleDateString()} - ${date.toLocaleTimeString()}`;
-        for (let i = 0; i < time.length; i++) {
-            //for(let j = 0; j < cnt; j++) {}
-            time[i].innerText = `${data.list[i].dt_txt.slice(11)} - ${data.list[i+1].dt_txt.slice(11)}`;
-        }
         //wind.innerText = `Wind: ${data[0].wind.speed} m/s`;
         for (let i = 0; i < wind.length; i++) {
             wind[i].innerText = `Wind: ${data.list[i].wind.speed} m/s`;
@@ -128,9 +236,15 @@ const getWeather = (cityId = 683844) => {
 
 getCities();
 getWeather();
+getCoordinates();
+
+
 
 select.addEventListener("change", function(e) {
     const cityId = e.target.value;
+    const cityName = e.target[e.target.selectedIndex].text;
     console.log("cityId: ", cityId);
+    console.log("cityName: ", cityName);
     getWeather(cityId);
+    getCoordinates(cityName);
 });
