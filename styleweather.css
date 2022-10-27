@@ -31,3 +31,12 @@ h1 {
 .city {
     margin-bottom: 25px;
 }
+
+.time-zone {
+    display: flex;
+    margin: 30px 15px 0px 15px;
+}
+
+.time-zone-value {
+    margin-left: 10px;
+}
