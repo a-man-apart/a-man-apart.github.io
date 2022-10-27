@@ -31,7 +31,7 @@
 },
     {
         "id": 683844,
-        "name": "Braşov",
+        "name": "Brasov",
         "state": "",
         "country": "RO",
         "coord": {
@@ -57,6 +57,16 @@
     "coord": {
         "lon": 12.56553,
         "lat": 55.675941
+    }
+},
+    {
+    "id": 3117735,
+    "name": "Madrid",
+    "state": "",
+    "country": "ES",
+    "coord": {
+        "lon": -3.70256,
+        "lat": 40.4165
     }
 },
     {
