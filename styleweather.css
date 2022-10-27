@@ -62,4 +62,10 @@ h1 {
         height: 450px;
         width: auto;
     }
+    .time-zone {
+        flex-direction: column;
+    }
+    .time-zone-value {
+        margin-left: 0px;
+    }
 }
