@@ -18,9 +18,13 @@ body{
     background-color: red;
     height: auto;
     width: 200px;
-    margin-top: 5rem;
+    
     text-align: center;
     border: 1px solid;
+}
+
+.section {
+    margin-top: 5rem;
 }
 
 h1 {
@@ -39,4 +43,11 @@ h1 {
 
 .time-zone-value {
     margin-left: 10px;
+}
+
+.interval {
+    background-color: red;
+    text-align: center;
+    border: 1px solid;
+    
 }
