@@ -201,7 +201,7 @@ const getWeather = (cityId = 683844) => {
         }
         //icon.src = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
         for (let i = 0; i < cnt; i++) {
-            icon[i].src = `http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`;
+            icon[i].src = `https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`;
         }
         weatherType.innerText = firstToUppercase1 (data.list[0].weather[0].description);
         for (let i = 0; i < cnt; i++) {
