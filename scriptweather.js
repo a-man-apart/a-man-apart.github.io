@@ -179,11 +179,6 @@ const getCoordinates = (cityName = "Brasov") => {
 };
 
 
-
-
-
-
-
 const getWeather = (cityId = 683844) => {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${cityId}&cnt=${cnt}&appid=${key}`, {
     method: 'GET',
@@ -253,7 +248,9 @@ const getWeather = (cityId = 683844) => {
 getCities();
 getWeather();
 getCoordinates();
-
+setInterval (() => {
+    getCoordinates();
+}, 30000);
 
 let cityId;
 let cityName;
