@@ -396,6 +396,94 @@ header + * {margin-top: 8rem;}
     }
 }
 
+.container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+}
+
+.h3, .title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8 {
+    color: #fff;
+    font-size: 20px;
+    font-family: "Raleway Thin, sans-serif";
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: 0;
+}
+
+.h3 { 
+    opacity: 1;
+}
+
+.title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8 {
+    position: absolute;
+    padding: 14px;
+    bottom: 0px;
+}
+
+.title1 {
+    animation: 8s slide 0s infinite;
+}
+
+.title2 {
+    animation: 8s slide 1s infinite;
+}
+
+.title3 {
+    animation: 8s slide 2s infinite;
+}
+
+.title4 {
+    animation: 8s slide 3s infinite;
+}
+
+.title5 {
+    animation: 8s slide 4s infinite;
+}
+
+.title6 {
+    animation: 8s slide 5s infinite;
+}
+
+.title7 {
+    animation: 8s slide 6s infinite;
+}
+
+.title8 {
+    animation: 8s slide 7s infinite;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 1;
+        bottom: 10px;
+    }
+
+    5% {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    10% {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    15% {
+        opacity: 0.25;
+        bottom: -20px;
+    }
+
+    20% {
+        opacity: 0;
+        bottom: 0;
+    } 
+}
+
 /*Despre mine*/
 
 /*Footer*/
