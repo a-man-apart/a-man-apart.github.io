@@ -359,7 +359,7 @@ header + * {margin-top: 8rem;}
 } */
 .about-me-inner-container h2 {
     font-size: 3.2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 .about-me-inner-container p {
     display: block;
