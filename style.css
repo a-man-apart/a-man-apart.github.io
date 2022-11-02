@@ -249,6 +249,69 @@ header + * {margin-top: 8rem;}
         
     }
 }
+
+.container1 {
+    background-color: red;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+
+}
+.title11, .title22, .title33 {
+    position: absolute;
+    padding: 14px;
+    bottom: 0px;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Raleway Thin, sans-serif";
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: 0;
+}
+
+.title11 {
+    animation: 6s slide1 0s infinite;
+}
+
+.title22 {
+    animation: 6s slide1 2s infinite;
+}
+
+.title33 {
+    animation: 6s slide1 4s infinite;
+}
+
+@keyframes slide1 {
+    0% {
+        opacity: 1;
+        bottom: 10px;
+    }
+
+    15% {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    25% {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    40% {
+        opacity: 0.25;
+        bottom: -10px;
+    }
+
+    50% {
+        opacity: 0;
+        bottom: 0;
+    }
+
+}
 /*Hero*/
 
 
