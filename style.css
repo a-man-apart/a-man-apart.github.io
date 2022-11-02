@@ -251,7 +251,7 @@ header + * {margin-top: 8rem;}
 }
 
 .container1 {
-    background-color: red;
+    background-color: grey;
     width: 100%;
     position: relative;
     display: flex;
