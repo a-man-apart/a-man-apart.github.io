@@ -18,9 +18,9 @@ body{
     background-color: red;
     height: auto;
     width: 250px;
-    
     text-align: center;
     border: 1px solid;
+    border-radius: 10px;
 }
 
 .section {
