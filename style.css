@@ -258,7 +258,7 @@ header + * {margin-top: 8rem;}
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    height: 50px;
+    height: 75px;
 
 }
 .title11, .title22, .title33 {
@@ -312,6 +312,17 @@ header + * {margin-top: 8rem;}
     }
 
 }
+@media (max-width:460px) {
+    .container1 {
+        margin-top: 10px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .title11, .title22, .title33 {
+        padding: 10px 0px;
+    }
+ 
+ }
 /*Hero*/
 
 
@@ -605,3 +616,13 @@ footer a {
         .box-quarter{ width:calc(33.335% - 5rem); }
     }
 /*Grid*/
+
+@media (max-width:740px) {
+    body {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    header {
+        width: 100%;
+    }
+}
