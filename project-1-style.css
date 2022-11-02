@@ -49,3 +49,13 @@ p {
 #back {
     margin-top: 15px;
 }
+
+@media (max-width:740px) {
+    body {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    header {
+        width: 100%;
+    }
+}
