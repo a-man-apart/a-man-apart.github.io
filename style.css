@@ -464,6 +464,20 @@ header + * {margin-top: 8rem;}
     }
 }
 
+@media (max-height:800px) {
+    .about-me > h1 {
+        margin-bottom: 10rem;
+    }
+}
+@media (max-height:730px) {
+    .about-me > h1 {
+        margin-bottom: 7rem;
+    }
+    .about-me-inner-container p {
+        width: 60rem;
+    }
+}
+
 @media (max-width:330px) {
     .about-me-inner-container > img {
         width: 10rem;
