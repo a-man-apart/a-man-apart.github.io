@@ -28,7 +28,7 @@ input {
 }
 
 button {
-    backgroud=color: lightgrey;
+    background-color: lightgrey;
     color: #00FF00;
     height: 29px;
     margin-left: 10px;
