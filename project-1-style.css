@@ -30,6 +30,8 @@ input {
 button {
     height: 29px;
     margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .input {
