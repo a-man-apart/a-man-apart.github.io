@@ -5,6 +5,7 @@ html {
 
 body {
     background-color: mediumpurple;
+    background-image: linear-gradient(mediumpurple, lightgrey)
     margin: 0 50px;
     min-height: calc(100vh - 40px);
     height: auto;
