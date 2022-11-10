@@ -343,6 +343,13 @@ header + * {margin-top: 8rem;}
     text-align: justify;
 }
 
+.my-portfolio-inner-container a {
+    color: purple;
+}
+.my-portfolio-inner-container button {
+    background-color : purple;
+}
+
 /*Pasiuni si Proiecte*/
 
 /*Recomandari*/
