@@ -264,7 +264,7 @@ header + * {margin-top: 8rem;}
 }
 .title11, .title22, .title33 {
     position: absolute;
-    padding: 26px;
+    padding: 24px;
     bottom: 0px;
     color: #fff;
     font-size: 20px;
