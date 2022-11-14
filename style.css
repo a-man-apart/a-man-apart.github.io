@@ -517,7 +517,7 @@ header + * {margin-top: 8rem;}
 
 .title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8 {
     position: absolute;
-    padding: 15px;
+    padding: 16px;
     bottom: 0px;
 }
 
