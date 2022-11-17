@@ -26,12 +26,37 @@ body{
     background-color: rgba(255, 255, 255, .65);
 }
 
+.calculator-grid .equals {
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(49, 250, 4, 0.5);
+}
+
+.calculator-grid .equals:hover {
+    background-color: rgba(49, 260, 90, 0.9);
+}
+
 .calculator-grid button:hover {
     background-color: rgba(255, 255, 255, .9);
 }
 
+
+
 .span-two {
     grid-column: span 2;
+    color: red;
+}
+
+.operation {
+    color: green;
+}
+
+.equals {
+    background-color: white;
+    color: green;
 }
 
 .output {
