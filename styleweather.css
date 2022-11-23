@@ -24,7 +24,12 @@ body{
 }
 
 .section {
-    margin-top: 5rem;
+    margin-top: 1rem;
+}
+
+.hourInterval {
+    margin-top: 4rem;
+    margin-left: 1rem;
 }
 
 h1 {
