@@ -3,6 +3,7 @@
 const key = "b40375fbb2f5e343f56a0e8e313ad655";
 let cnt;
 let period = document.querySelector(".selected-period");
+let hourInterval = document.querySelectorAll(".hourInterval");
 console.log("Perioada: ", period.value);
 
  if (period.value == "12h") {
@@ -13,6 +14,8 @@ console.log("Perioada: ", period.value);
     document.getElementById("container-2").style.display = "flex";
     document.getElementById("container-3").style.display = "none";
     document.getElementById("container-4").style.display = "none";
+    hourInterval[0].innerText = "12h";
+    hourInterval[1].innerText = "24h";
  } else if (period.value == "36h") {
     cnt = 12;
  } else {
@@ -112,7 +115,7 @@ const getCoordinates = (cityName = "Brasov") => {
 
             console.log("DataHour: ", data);
             
-                    let hour = data.date_time.slice(11, 20);
+                    let hour = data.date_time.slice(11, 16);
                     console.log("Hour: ", hour);
                     time.innerText = hour;
                        
@@ -273,24 +276,40 @@ period.addEventListener("change", function(e) {
         document.getElementById("container-2").style.display = "none";
         document.getElementById("container-3").style.display = "none";
         document.getElementById("container-4").style.display = "none";
+        hourInterval[0].innerText = "12h";
+        hourInterval[1].innerText = "";
+        hourInterval[2].innerText = "";
+        hourInterval[3].innerText = "";
      } else if (period.value == "24h") {
         cnt = 8;
         document.getElementById("container-1").style.display = "flex";
         document.getElementById("container-2").style.display = "flex";
         document.getElementById("container-3").style.display = "none";
         document.getElementById("container-4").style.display = "none";
+        hourInterval[0].innerText = "12h";
+        hourInterval[1].innerText = "24h";
+        hourInterval[2].innerText = "";
+        hourInterval[3].innerText = "";
      } else if (period.value == "36h") {
         cnt = 12;
         document.getElementById("container-1").style.display = "flex";
         document.getElementById("container-2").style.display = "flex";
         document.getElementById("container-3").style.display = "flex";
         document.getElementById("container-4").style.display = "none";
+        hourInterval[0].innerText = "12h";
+        hourInterval[1].innerText = "24h";
+        hourInterval[2].innerText = "36h";
+        hourInterval[3].innerText = "";
      } else if (period.value == "48h") {
         cnt = 16;
         document.getElementById("container-1").style.display = "flex";
         document.getElementById("container-2").style.display = "flex";
         document.getElementById("container-3").style.display = "flex";
         document.getElementById("container-4").style.display = "flex";
+        hourInterval[0].innerText = "12h";
+        hourInterval[1].innerText = "24h";
+        hourInterval[2].innerText = "36h";
+        hourInterval[3].innerText = "48h";
      };
      console.log("CNT: ", cnt);
     getWeather(cityId);
