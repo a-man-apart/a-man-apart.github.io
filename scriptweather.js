@@ -129,7 +129,7 @@ const getCoordinates = (cityName = "Brasov") => {
                             for (let i = 1; i < (cnt+1); i++) {
                                 interval[i-1].innerText = `${array[i]} - ${array[i+1]}`;
                             };
-                        } else if (ora <= 06 && ora <= 08) {
+                        } else if (ora >= 06 && ora <= 08) {
                             for (let i = 2; i < (cnt+2); i++) {
                                 interval[i-2].innerText = `${array[i]} - ${array[i+1]}`;
                             }; 
