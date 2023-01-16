@@ -393,7 +393,7 @@ header + * {margin-top: 8rem;}
     text-indent: 2rem;
 }
 
-@media (max-width:900px){
+@media (max-width:1175px){
     .recomandations-box {
         height: auto;
         display: block;
