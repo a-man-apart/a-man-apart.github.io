@@ -600,6 +600,7 @@ footer address {
 }
 
 footer a {
+    color:white;
     display: block;
     font-size: 1.8rem;
     margin-bottom: 0.75rem;
